@@ -4,3 +4,19 @@ function isDate ( dateArg ) {
 	return !isNaN(t.valueOf());
 }
 
+// Returns the maximum date of the passed array of date strings
+function maxDate ( dates ) {
+
+	var maxDate = dates[0],
+		maxDateObj = new Date( dates[0] );
+
+	dates.forEach( function ( date, index ) {
+		if ( new Date( date ) > maxDateObj ) {
+			maxDate = date;
+			maxDateObj = new Date( date );
+		};
+	});
+
+	return maxDate;
+}
+
