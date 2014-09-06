@@ -35,3 +35,8 @@ function minDate ( dates ) {
 
 	return minDate;
 }
+
+// Checks if the date range is valid
+function isValidRange ( minDate, maxDate ) {
+	return ( new Date( minDate ) <= new Date( maxDate ) );
+}
