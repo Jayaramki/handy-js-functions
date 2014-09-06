@@ -20,3 +20,18 @@ function maxDate ( dates ) {
 	return maxDate;
 }
 
+// Returns the minimum date of the passed array of date strings
+function minDate ( dates ) {
+
+	var minDate = dates[0],
+		minDateObj = new Date( dates[0] );
+
+	dates.forEach( function ( date, index ) {
+		if ( new Date( date ) < minDateObj ) {
+			minDate = date;
+			minDateObj = new Date( date );
+		};
+	});
+
+	return minDate;
+}
