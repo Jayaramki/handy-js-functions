@@ -22,7 +22,15 @@ Below are the functions along with the detail of what they do
 Dates
 ====
 **isDate()** checks if the passed parameter is a valid date or not
+```sh
+isDate('Jun 12 2014') // true
+isDate('Some Gibbrish') // false
 
 **maxDate()** gets an array of dates and returns the max date in that array
+```sh
+maxDate(['Jun 12, 2014', 'Jun 11, 2014', 'May 10, 2014']) // Jun 12, 2014
 
-**isValidRange()** from the two passed dates, checks if the first date is less than the second one i.e. does they represent a valid range and returns true or false
+**isValidRange()** from the two passed dates (any format string), checks if the first date is less than the second one i.e. does they represent a valid range and returns true or false
+```sh
+isValidRange('10/11/2014', '10/11/2013') // false
+isValidRange('10/11/2013', '10/11/2014') // true
