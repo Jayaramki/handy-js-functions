@@ -22,5 +22,7 @@ Below are the functions along with the detail of what they do
 Dates
 ====
 **isDate()** checks if the passed parameter is a valid date or not
+
 **maxDate()** gets an array of dates and returns the max date in that array
+
 **isValidRange()** from the two passed dates, checks if the first date is less than the second one i.e. does they represent a valid range and returns true or false
