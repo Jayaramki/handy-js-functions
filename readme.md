@@ -24,11 +24,18 @@ Dates
 **isDate()** checks if the passed parameter is a valid date or not
 ```sh
 isDate('Jun 12 2014') // true
+isDate('2014/11/11') // true
 isDate('Some Gibbrish') // false
 ```
 **maxDate()** gets an array of dates and returns the max date in that array
 ```sh
 maxDate(['Jun 12, 2014', 'Jun 11, 2014', 'May 10, 2014']) // Jun 12, 2014
+maxDate(['2014/06/12', '2014/05/12', '2014/05/10']) // 2014/06/12
+```
+**minDate()** gets an array of dates and returns the minimum date in that array
+```sh
+minDate(['Jun 12, 2014', 'Jun 11, 2014', 'May 10, 2014']) // May 10, 2014
+maxDate(['2014/06/12', '2014/05/12', '2014/05/10']) // 2014/05/10
 ```
 **isValidRange()** from the two passed dates (any format string), checks if the first date is less than the second one i.e. does they represent a valid range and returns true or false
 ```sh
