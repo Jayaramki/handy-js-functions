@@ -47,3 +47,7 @@ isValidRange('10/11/2013', '10/11/2014') // true
 getMySqlDateFormat('Sep 07, 2014'); // 2014/09/07
 getMySqlDateFormat('Sep-07-2014'); // 2014/09/07
 ```
+**getCurrentDate()** returns the current date in the form of mysql date
+```sh
+getCurrentDate(); // 2014/09/07
+```
