@@ -43,6 +43,34 @@ function isValidRange ( minDate, maxDate ) {
 
 // Returns mysql date format e.g. 2014/09/07
 function getMySqlDateFormat ( dateArg ) {	
+	
 	var date = new Date( dateArg );
-	return date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate();
+
+	var dd = date.getDate();
+	var mm = date.getMonth() + 1; //January is 0!
+	var yyyy = date.getFullYear();
+
+	dd = ( dd < 10 ) ? ( '0' + dd ) : dd;
+	mm = ( mm < 10 ) ? ( '0' + mm ) : mm;
+	
+	date = yyyy + '/' + mm + '/' + dd;
+
+	return date;
+}
+
+// Returns the current date
+function getCurrentDate () {
+	
+	var today = new Date();
+
+	var dd = today.getDate();
+	var mm = today.getMonth() + 1; //January is 0!
+	var yyyy = today.getFullYear();
+
+	dd = ( dd < 10 ) ? ( '0' + dd ) : dd;
+	mm = ( mm < 10 ) ? ( '0' + mm ) : mm;
+
+	today = yyyy + '/' + mm + '/' + dd;
+
+	return today;
 }
