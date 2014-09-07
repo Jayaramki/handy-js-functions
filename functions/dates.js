@@ -40,3 +40,9 @@ function minDate ( dates ) {
 function isValidRange ( minDate, maxDate ) {
 	return ( new Date( minDate ) <= new Date( maxDate ) );
 }
+
+// Returns mysql date format e.g. 2014/09/07
+function getMySqlDateFormat ( dateArg ) {	
+	var date = new Date( dateArg );
+	return date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate();
+}
