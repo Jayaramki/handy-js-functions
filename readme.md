@@ -1,6 +1,6 @@
 What is this
 =========
-This is just a set of useful functions which are more or less trivial. **I'll continue to update the repository on daily basis with the functions that I write while working on any of my projects**.
+This is just a set of useful functions which are more or less trivial. **I know it's minimal yet, but I'll continue to update the repository on daily basis with the functions that I write while working on any of my projects**.
 
 I hope, they might be useful for others.
 
