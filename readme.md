@@ -53,3 +53,10 @@ getMySqlDateFormat('Sep-07-2014'); // 2014/09/07
 ```sh
 getCurrentDate(); // 2014/09/07
 ```
+DOM
+====
+**isPageEndReached()** checks if the end of page is reached. Pass the optional param (numeric value) that will check if that much pixels are left towards the apge end
+```sh
+isPageEndReached(); // true/false depending upon the scroll position
+isPageEndReached(100); // true if there are 100 pixels remaining to reach the page end
+```
