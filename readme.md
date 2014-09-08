@@ -53,6 +53,12 @@ getMySqlDateFormat('Sep-07-2014'); // 2014/09/07
 ```sh
 getCurrentDate(); // 2014/09/07
 ```
+
+**isLeapYear(year)** Checks if year is a Leap year
+```sh
+isLeapYear(2014); // false
+isLeapYear(2000); // true
+```
 DOM
 ====
 **isPageEndReached()** checks if the end of page is reached. Pass the optional param (numeric value) that will check if that much pixels are left towards the apge end
@@ -60,3 +66,97 @@ DOM
 isPageEndReached(); // true/false depending upon the scroll position
 isPageEndReached(100); // true if there are 100 pixels remaining to reach the page end
 ```
+
+Tests
+====
+**isString(obj)** Checks if object is a string
+```sh
+var str = "Hello World"
+isString(str) // returns string
+```
+
+**isArray(obj)** Checks if object is a array
+```sh
+var arr = [1,2,3]
+isArray(arr) // returns array
+```
+
+**isInt(obj)** Checks if object is a intger 
+```sh
+var str = 42
+isInt(str) // returns true
+```
+
+**isEmail(obj)** Checks if object is a email
+```sh
+var str = '123@abc.com'
+isEmail(str) // returns true
+```
+
+**isIP(obj)** Checks if object is a IP Address
+```sh
+var str = '127.0.0.1'
+isIP(str) // returns true
+```
+
+**arrContains(a, obj)** Checks if a array contains a object
+```sh
+var arr = [1,2,3]
+var str = 2
+arrContains(arr, str) // returns true
+```
+
+String Manipulation
+====
+**toSlug(str)** Generates a URL-friendly "slug" from a provided string.
+```sh
+var str = "there was a egg on the wall"
+toSlug(str) // returns 'there-was-a-egg-on-the-wall'
+```
+
+**trim(str)** Removes any white space to the right and left of the string
+```sh
+var str = "  there was a egg on the wall  "
+trim(str) // returns 'there was a egg on the wall'
+```
+
+**ltrim(str)** Removes any white space to the left of the string
+```sh
+var str = "  there was a egg on the wall  "
+ltrim(str) // returns 'there was a egg on the wall  '
+```
+
+**rtrim(str)** Removes any white space to the right of the string
+```sh
+var str = "  there was a egg on the wall  "
+ltrim(str) // returns '  there was a egg on the wall'
+```
+
+**truncate(str)** Truncate a string to a given length
+```sh
+var str = "there was a egg on the wall"
+truncate(str, 3) // returns 'the'
+```
+
+**onlyLetters(str)** Return a string only containing the letters a to z
+```sh
+var str = "there was a 200 eggs on the wall"
+onlyLetters(str) // returns 'there was a eggs on the wall'
+```
+
+**onlyLettersNums(str)** Return a string only containing the letters a to z and numbers
+```sh
+var str = "there was a 200 eggs on the wall!!!"
+onlyLettersNums(str) // returns 'there was a 200 eggs on the wall'
+```
+
+
+**onlyNums(str)** Return a string only containing the numbers
+```sh
+var str = "there was a 200 eggs on the wall!!!"
+onlyNums(str) // returns '200'
+```
+
+
+
+
