@@ -35,3 +35,9 @@ function onlyNums(str) {
 function onlyLettersNums(str) {
     return str.toLowerCase().replace(/[^a-z,0-9,-]/g, "");
 };
+
+// Generates a URL-friendly "slug" from a provided string.
+function toSlug(str) {
+  return str.toLowerCase().replace(/-+/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+};
+

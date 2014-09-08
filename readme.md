@@ -87,6 +87,12 @@ var str = '123@abc.com'
 isEmail(str) // returns true
 ```
 
+**isIP(obj)** Checks if object is a IP Address
+```sh
+var str = '127.0.0.1'
+isIP(str) // returns true
+```
+
 **arrContains(a, obj)** Checks if a array contains a object
 ```sh
 var arr = [1,2,3]
@@ -96,6 +102,11 @@ arrContains(arr, str) // returns true
 
 String Manipulation
 ====
+**toSlug(str)** Generates a URL-friendly "slug" from a provided string.
+```sh
+var str = "there was a egg on the wall"
+toSlug(str) // returns 'there-was-a-egg-on-the-wall'
+```
 
 **trim(str)** Removes any white space to the right and left of the string
 ```sh

@@ -33,3 +33,9 @@ function arrContains(a, obj) {
     }
     return false;
 };
+
+// Is an object a IP Address
+function isIP(obj) {
+    var re = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+    return re.test(obj);
+};
