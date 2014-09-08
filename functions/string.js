@@ -41,3 +41,18 @@ function toSlug(str) {
   return str.toLowerCase().replace(/-+/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 };
 
+// Is an object a string
+function isString(obj) {
+    return typeof (obj) == 'string';
+};
+
+// Is an object a email address
+function isEmail( obj ) {
+    return obj.match(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/ig);
+};
+
+// Is an object a IP Address
+function isIP( obj ) {
+    var regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+    return regex.test( obj );
+};

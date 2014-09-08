@@ -67,36 +67,12 @@ isPageEndReached(); // true/false depending upon the scroll position
 isPageEndReached(100); // true if there are 100 pixels remaining to reach the page end
 ```
 
-Tests
+Array
 ====
-**isString(obj)** Checks if object is a string
+**isArray(obj)** Checks if object is an array
 ```sh
-var str = "Hello World"
-isString(str) // returns string
-```
-
-**isArray(obj)** Checks if object is a array
-```sh
-var arr = [1,2,3]
-isArray(arr) // returns array
-```
-
-**isInt(obj)** Checks if object is a intger 
-```sh
-var str = 42
-isInt(str) // returns true
-```
-
-**isEmail(obj)** Checks if object is a email
-```sh
-var str = '123@abc.com'
-isEmail(str) // returns true
-```
-
-**isIP(obj)** Checks if object is a IP Address
-```sh
-var str = '127.0.0.1'
-isIP(str) // returns true
+isArray([1,2,3]) // returns true
+isArray(2) // returns false
 ```
 
 **arrContains(a, obj)** Checks if a array contains a object
@@ -106,8 +82,23 @@ var str = 2
 arrContains(arr, str) // returns true
 ```
 
-String Manipulation
+Number
 ====
+
+**isInt(obj)** Checks if object is an intger 
+```sh
+var str = 42
+isInt(str) // returns true
+```
+
+String
+====
+**isString(obj)** Checks if object is a string
+```sh
+isString("Hello World") // returns true
+isString(23) // returns false
+```
+
 **toSlug(str)** Generates a URL-friendly "slug" from a provided string.
 ```sh
 var str = "there was a egg on the wall"
@@ -150,13 +141,22 @@ var str = "there was a 200 eggs on the wall!!!"
 onlyLettersNums(str) // returns 'there was a 200 eggs on the wall'
 ```
 
-
 **onlyNums(str)** Return a string only containing the numbers
 ```sh
 var str = "there was a 200 eggs on the wall!!!"
 onlyNums(str) // returns '200'
 ```
 
+**isEmail(obj)** Checks if object is a email
+```sh
+var str = '123@abc.com'
+isEmail(str) // returns true
+```
 
+**isIP(obj)** Checks if object is a IP Address
+```sh
+var str = '127.0.0.1'
+isIP(str) // returns true
+```
 
 
