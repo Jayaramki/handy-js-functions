@@ -4,6 +4,11 @@ function isDate ( dateArg ) {
 	return !isNaN(t.valueOf());
 }
 
+// Checks if year is a Leap year
+function isLeapYear (year) {
+	return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0); 
+};
+
 // Returns the maximum date of the passed array of date strings
 function maxDate ( dates ) {
 

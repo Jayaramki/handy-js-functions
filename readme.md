@@ -53,6 +53,12 @@ getMySqlDateFormat('Sep-07-2014'); // 2014/09/07
 ```sh
 getCurrentDate(); // 2014/09/07
 ```
+
+**isLeapYear(year)** Checks if year is a Leap year
+```sh
+isLeapYear(2014); // false
+isLeapYear(2000); // true
+```
 DOM
 ====
 **isPageEndReached()** checks if the end of page is reached. Pass the optional param (numeric value) that will check if that much pixels are left towards the apge end
