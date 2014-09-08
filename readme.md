@@ -102,7 +102,6 @@ isString(23) // returns false
 **toSlug(str)** Generates a URL-friendly "slug" from a provided string.
 ```sh
 var str = "There were eggs on the wall"
-<<<<<<< HEAD
 toSlug(str) // returns 'there-were-eggs-on-the-wall'
 ```
 
