@@ -98,11 +98,16 @@ Number
 var str = 42
 isInt(str) // returns true
 ```
-**getDecimals ( number, decimalCount )** will transform the number to `decimalCount` number of digits after the decimal point.
+**getDecimals ()** will transform the number to `decimalCount` number of digits after the decimal point.
 ```sh
 getDecimals( 2.523232323, 2) // 2.52
 getDecimals( 22323.1, 2) // 22323.10
 getDecimals( 12.11, 3) // 12.110
+```
+**getInt()** returns the integer value of the passed number if the number found and 0 if that's not a number.
+```sh
+getInt('25') // 25
+getInt('asdfsd') // 0
 ```
 
 String

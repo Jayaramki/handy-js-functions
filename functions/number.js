@@ -10,3 +10,8 @@ function getDecimals ( number, decimalCount ) {
 	number = parseFloat( number ) || 0;
 	return number.toFixed( decimalCount );
 }
+
+// Returns the integer value, if it is an integer and 0 otherwise instead of NaN
+function getInt ( number ) {
+	return parseInt( number, 10 ) || 0;
+}
