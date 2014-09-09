@@ -114,68 +114,73 @@ String
 ====
 **isString(obj)** Checks if object is a string
 ```sh
-isString("Hello World") // returns true
-isString(23) // returns false
+isString( "Hello World" ) // returns true
+isString( 23 ) // returns false
 ```
 
-**toSlug(str)** Generates a URL-friendly "slug" from a provided string.
+**toSlug( str )** Generates a URL-friendly "slug" from a provided string.
 ```sh
 var str = "There were eggs on the wall"
-toSlug(str) // returns 'there-were-eggs-on-the-wall'
+toSlug( str ) // returns 'there-were-eggs-on-the-wall'
 ```
 
-**trim(str)** Removes any white space to the right and left of the string
+**trim( str )** Removes any white space to the right and left of the string
 ```sh
 var str = "  There were eggs on the wall  "
-trim(str) // returns 'There were eggs on the wall'
+trim( str ) // returns 'There were eggs on the wall'
 ```
 
-**ltrim(str)** Removes any white space to the left of the string
+**ltrim( str )** Removes any white space to the left of the string
 ```sh
 var str = "  There were eggs on the wall  "
-ltrim(str) // returns 'There were eggs on the wall  '
+ltrim( str ) // returns 'There were eggs on the wall  '
 ```
 
-**rtrim(str)** Removes any white space to the right of the string
+**rtrim( str )** Removes any white space to the right of the string
 ```sh
 var str = "  There were eggs on the wall  "
 ltrim(str) // returns '  There were eggs on the wall'
 ```
 
-**truncate(str)** Truncate a string to a given length
+**truncate( str, charCount )** Truncate a string to a given length
 ```sh
 var str = "There were eggs on the wall"
-truncate(str, 3) // returns 'the'
+truncate( str, 3 ) // returns 'the'
 ```
 
-**onlyLetters(str)** Return a string only containing the letters a to z
+**onlyLetters( str )** Return a string only containing the letters a to z
 ```sh
 var str = "There were 200 eggs on the wall"
-onlyLetters(str) // returns 'there were eggs on the wall'
+onlyLetters( str ) // returns 'there were eggs on the wall'
 ```
 
-**onlyLettersNums(str)** Return a string only containing the letters a to z and numbers
+**onlyLettersNums( str )** Return a string only containing the letters a to z and numbers
 ```sh
 var str = "There were 200 eggs on the wall!!!"
-onlyLettersNums(str) // returns 'There were 200 eggs on the wall'
+onlyLettersNums( str ) // returns 'There were 200 eggs on the wall'
 ```
 
-**onlyNums(str)** Return a string only containing the numbers
+**onlyNums( str )** Return a string only containing the numbers
 ```sh
 var str = "There were 200 eggs on the wall!!!"
 onlyNums(str) // returns '200'
 ```
 
-**isEmail(obj)** Checks if object is a email
+**isEmail( obj )** Checks if object is a email
 ```sh
 var str = '123@abc.com'
 isEmail(str) // returns true
 ```
 
-**isIP(obj)** Checks if object is a IP Address
+**isIP( obj )** Checks if object is a IP Address
 ```sh
 var str = '127.0.0.1'
 isIP(str) // returns true
 ```
-
-
+Objects
+====
+**isEmptyObject ( obj )** checks if the object passed is empty or not!
+```sh
+isEmptyObject ({}) // true
+isEmptyObject({ name: 'Kamran' }) // false
+```
