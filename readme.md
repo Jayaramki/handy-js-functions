@@ -66,6 +66,15 @@ DOM
 isPageEndReached(); // true/false depending upon the scroll position
 isPageEndReached(100); // true if there are 100 pixels remaining to reach the page end
 ```
+**fixPlaceholders()** fixes the placeholders in the older browsers which don't support HTML-5 placeholder attribute.
+```sh
+// For example, let's fix the inputs for IE
+var browserName=navigator.appName; 
+if (browserName=="Microsoft Internet Explorer") 
+{	
+	fixPlaceholders();
+}
+```
 
 Array
 ====
