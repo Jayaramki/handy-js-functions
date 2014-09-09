@@ -151,7 +151,7 @@ truncate(str, 3) // returns 'the'
 **onlyLetters(str)** Return a string only containing the letters a to z
 ```sh
 var str = "There were 200 eggs on the wall"
-onlyLetters(str) // returns 'there was a eggs on the wall'
+onlyLetters(str) // returns 'there were eggs on the wall'
 ```
 
 **onlyLettersNums(str)** Return a string only containing the letters a to z and numbers
