@@ -1,9 +1,14 @@
-What is this
+What is this?
 =========
 This is just a set of useful functions which are more or less trivial. **I know it's minimal yet, but I'll continue to update the repository on daily basis with the functions that I write while working on any of my projects**.
 
 I hope, they might be useful for others.
 
+Why I created this?
+=========
+You don't need to be a <a href="http://www.imdb.com/title/tt1001526/" target="_blank">Mega mind</a> to understand the content of this repository they are just a simple functions which you can grab and use in your projects easily. 
+Initially I created this repository just because I was deciding for **my next opensource project** that might show off my skillset as well as help the others out there and I **didn't want that I get my mind off the github**, so I created this repository and decided to **maintain until I start my next opensource project**. But I'm **planning on not to abandon this** repository, I'll **continue to commit to this repository** along with my other project, so I've **set myself up to the challenge** that no matter what, I'll **write a one useful javascript function each day**.
+More at <a href="http://kamranahmed.info/contribute-to-evolve/" target="_blank">http://kamranahmed.info/contribute-to-evolve/</a>
 
 How to use?
 ===
