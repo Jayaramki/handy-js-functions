@@ -15,3 +15,18 @@ function arrContains(a, obj) {
     }
     return false;
 };
+
+// accepts an array and a delimiter and returns a string containing the array elements concatenated by the pased delimiter
+function explode( arr, delim ) {
+
+   var lastIndex = arr.length - 1,
+       string = '';
+
+   arr.forEach(function(el, index){
+      string += el;
+      if ( index !== lastIndex ) {
+          string += delim;
+      }
+   });
+   return string;
+}
