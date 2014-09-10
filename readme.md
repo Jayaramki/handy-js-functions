@@ -184,3 +184,9 @@ Objects
 isEmptyObject ({}) // true
 isEmptyObject({ name: 'Kamran' }) // false
 ```
+**deleteObjProp( obj, property )** removes the property and returns the new object
+```sh
+var student = { name: 'Some Student', rollno: '123' };
+student = deleteObjProp( student, property );
+console.log( student ); // student => { name: 'Some Student' }
+```

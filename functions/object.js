@@ -8,3 +8,9 @@ function isEmptyObject ( obj ) {
 
 	return true;
 }
+
+// Removes property from an object
+function deleteObjProp ( obj, property ) {
+	delete obj[property];
+	return obj;
+}
