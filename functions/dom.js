@@ -1,3 +1,7 @@
+/**
+ * NOTE: This module requires Jquery to work properly.
+ */
+
 var HandyDom = {
 
   /**

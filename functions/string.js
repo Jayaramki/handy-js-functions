@@ -1,66 +1,118 @@
-// Removes any white space to the right and left of the string
-function trim(str) {
-    return str.replace(/^\s+|\s+$/g, "");
-}
+var HandyString = {
 
-// Removes any white space to the left of the string
-function ltrim(str) {
-    return str.replace(/^\s+/, "");
-}
+  /**
+   * Removes any whitespaces to the right and left of the passed string
+   * @param  {string} str String which is to be processed
+   * @return {string}     Modified string with left and right whitespaces removed
+   */
+  trim : function ( str ) {
+      return str.replace(/^\s+|\s+$/g, "");
+  },
 
-// Removes any white space to the right of the string
-function rtrim(str) {
-    return str.replace(/\s+$/, "");
-}
+  /**
+   * Removes any white spaces to the left of the string
+   * @param  {string} str String which is to be processed for the whitespaces
+   * @return {string}     Updated string with the whitespaces removed from the left
+   */
+  ltrim : function ( str ) {
+      return str.replace(/^\s+/, "");
+  },
 
-// Truncate a string to a given length
-function truncate(str, len) {
-    if (str.length > len) {
-        str = str.substring(0, len);
-    }
-    return str;
-};
+  /**
+   * Removes any white spaces to the right of the string
+   * @param  {string} str String which is to be processed for the whitespaces
+   * @return {string}     Updated string with the whitespaces removed from the right
+   */
+  rtrim : function ( str ) {
+      return str.replace(/\s+$/, "");
+  },
 
-// Return a string only containing the letters a to z
-function onlyLetters(str) {
-    return str.toLowerCase().replace(/[^a-z]/g, "");
-};
+  /**
+   * Truncates a string to the given length
+   * @param  {string} str String of which the length is to be truncated
+   * @param  {integer} len Integer value representing the length of the string which is to be truncated
+   * @return {string}     Returns the truncated string with
+   */
+  truncate : function ( str , len) {
+      if (str.length > len) {
+          str = str.substring(0, len);
+      }
+      return str;
+  },
 
-// Return a string only containing the numbers
-function onlyNums(str) {
-    return str.toLowerCase().replace(/[^0-9]/g, "");
-};
+  /**
+   * Returns a string only containing the letters and nothing else
+   * @param  {string} str String from which the characters are to be returned
+   * @return {string}     String having only characters
+   */
+  onlyLetters : function ( str ) {
+      return str.toLowerCase().replace(/[^a-z]/g, "");
+  },
 
-// Return a string only containing the letters a to z and numbers
-function onlyLettersNums(str) {
-    return str.toLowerCase().replace(/[^a-z,0-9,-]/g, "");
-};
+  /**
+   * Returns the string consisting of numbers only and nothing else
+   * @param  {string} str String from which the  need to be removd
+   * @return {string}     String having no numbers in it
+   */
+  onlyNums : function ( str ) {
+      return str.toLowerCase().replace(/[^0-9]/g, "");
+  },
 
-// Generates a URL-friendly "slug" from a provided string.
-function toSlug(str) {
-  return str.toLowerCase().replace(/-+/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-};
+  /**
+   * Returns a string only containing the letters a to z and numbers
+   * @param  {string} str String which is to be processed over
+   * @return {string}     String containing only the letters and numbers
+   */
+  onlyLettersNums : function ( str ) {
+      return str.toLowerCase().replace(/[^a-z,0-9,-]/g, "");
+  },
 
-// Is an object a string
-function isString(obj) {
-    return typeof (obj) == 'string';
-};
+  /**
+   * Generates a URL-friendly "slug" from a provided string.
+   * @param  {string} str String which needs to be converted to slug
+   * @return {string}     Slug generated from the String
+   */
+  toSlug : function ( str ) {
+    return str.toLowerCase().replace(/-+/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+  },
 
-// Is an object a email address
-function isEmail( obj ) {
-    return obj.match(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/ig);
-};
+  /**
+   * Checks if the object passed is a string or not
+   * @param  {object}  obj Anything i.e. a number, a string or whatever that is to be checked
+   * @return {Boolean}     True if the passed parameter is a string and false otherwise
+   */
+  isString : function ( obj ) {
+      return typeof (obj) == 'string';
+  },
 
-// Is an object a IP Address
-function isIP( obj ) {
-    var regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-    return regex.test( obj );
-};
+  /**
+   * Checks if the passed parameter is a valid email address or not
+   * @param  {object}  obj Object that is to be checked if it is an email or not
+   * @return {Boolean}     True if the object is a valid email and false otherwise
+   */
+  isEmail : function (  obj  ) {
+      return obj.match(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/ig);
+  },
 
-// Strips html from the passed string
-function strip( html )
-{
-   var tmp = document.createElement("div");
-   tmp.innerHTML = html;
-   return tmp.textContent || tmp.innerText || "";
+  /**
+   * Checks if the passed parameter is a valid IP address or not
+   * @param  {object}  obj The object that is to be checked if it is an IP or not
+   * @return {Boolean}     True if the object is an IP and false otherwise
+   */
+  isIP : function (  obj  ) {
+      var regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+      return regex.test( obj );
+  },
+
+  /**
+   * Strips HTML tags from the string and returns the resulting string
+   * @param  {string} html String containing some HTML tags
+   * @return {string}      String having no HTML tags
+   */
+  strip : function (  html  )
+  {
+     var tmp = document.createElement("div");
+     tmp.innerHTML = html;
+     return tmp.textContent || tmp.innerText || "";
+  }
 }
