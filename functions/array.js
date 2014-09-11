@@ -1,13 +1,22 @@
 var HandyArray = {
 
-  // Is an object a array
+  /**
+   * Checks if the passed object is an array or not
+   * @param  {object}  obj Any object that is to be checked
+   * @return {Boolean}     true if the object is an arry and false otherwise
+   */
   isArray : function ( obj ) {
       return obj && !(obj.propertyIsEnumerable('length'))
           && typeof obj === 'object'
           && typeof obj.length === 'number';
   },
 
-  // Does a given array contain a item
+  /**
+   * Checks if the array contains the passed element
+   * @param  {array} arr array of elements
+   * @param  {object} obj Any number, string something that is to be checked inside the array
+   * @return {Boolean}     true if the passed element is found in the object and false otherwise
+   */
   arrContains : function ( arr, obj ) {
       var i = arr.length;
       while (i--) {
@@ -18,7 +27,12 @@ var HandyArray = {
       return false;
   },
 
-  // accepts an array and a delimiter and returns a string containing the array elements concatenated by the pased delimiter
+  /**
+   * Concatenates the elements of the passed array with the delimiter passed
+   * @param  {array} arr   Array whose elements need to be joined
+   * @param  {string} delim Any string or character which will be used for the concatenation of elements
+   * @return {string}       Returns the string containing the elements of the array concatenated with eachother with delimiter
+   */
   implode : function ( arr, delim ) {
 
      var lastIndex = arr.length - 1,
