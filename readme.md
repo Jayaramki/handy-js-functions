@@ -96,10 +96,10 @@ var str = 2
 arrContains(arr, str) // returns true
 ```
 
-**explode(array, delimiter)** similar to the explode function of PHP, accepts an array and a delimiter and returns a string containing the array elements concatenated by the passed delimiter
+**implode(array, delimiter)** similar to the implode function of PHP, accepts an array and a delimiter and returns a string containing the array elements concatenated by the passed delimiter
 ```sh
 var arr = [12,3,4,23,21,2];
-explode(arr, '+'); // "12+3+4+23+21+2"
+implode(arr, '+'); // "12+3+4+23+21+2"
 ```
 
 Number
