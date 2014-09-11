@@ -56,3 +56,11 @@ function isIP( obj ) {
     var regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
     return regex.test( obj );
 };
+
+// Strips html from the passed string
+function strip( html )
+{
+   var tmp = document.createElement("div");
+   tmp.innerHTML = html;
+   return tmp.textContent || tmp.innerText || "";
+}

@@ -188,6 +188,11 @@ isEmail(str) // returns true
 var str = '127.0.0.1'
 isIP(str) // returns true
 ```
+**strip( html )** Strips html tags frmo the passed html string
+```sh
+var html = "<h1>Hello there.</h1><p>I have got some HTML tags</p>";
+strip( html ) // returns "Hello there. I have got some HTML tags"
+```
 Objects
 ====
 **isEmptyObject ( obj )** checks if the object passed is empty or not!
