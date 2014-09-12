@@ -12,7 +12,15 @@ More at <a href="http://kamranahmed.info/contribute-to-evolve/" target="_blank">
 
 How to use?
 ===
-These functions are divided in multiple categories, and each category has its own file e.g. all the dates related functions are inside date.js, dom related functions are inside dom.js and so on.
+There are different modules in the functions directory. Each module has it's own separate file e.g. string.js has a string module. I have named each module prefixed with `Handy` e.g. HandyString, HandyDate and so on, so that it may not conflict with any existing modules that you might have. To use any of the modules, just include the file on your page e.g.
+```sh
+<script src="assets/js/functions/string.js"></script>
+```
+And then simple use `ModuleName.functionName()` to call some specific function e.g.
+```sh
+HandyDate.isValidRange('10/11/2014', '10/11/2013') // false
+```
+and so on.
 
 Contributing
 ===
