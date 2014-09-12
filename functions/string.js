@@ -46,7 +46,7 @@ var HandyString = {
    * @return {string}     String having only characters
    */
   onlyLetters : function ( str ) {
-      return str.toLowerCase().replace(/[^a-z]/g, "");
+      return str.replace(/[^a-zA-Z\s]/g, "");
   },
 
   /**
@@ -55,7 +55,7 @@ var HandyString = {
    * @return {string}     String having no numbers in it
    */
   onlyNums : function ( str ) {
-      return str.toLowerCase().replace(/[^0-9]/g, "");
+      return str.replace(/[^0-9]/g, "");
   },
 
   /**
@@ -64,7 +64,7 @@ var HandyString = {
    * @return {string}     String containing only the letters and numbers
    */
   onlyLettersNums : function ( str ) {
-      return str.toLowerCase().replace(/[^a-z,0-9,-]/g, "");
+      return str.replace(/[^a-zA-Z0-9-\s]/g, "");
   },
 
   /**
