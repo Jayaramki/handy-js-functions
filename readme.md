@@ -88,7 +88,10 @@ if (browserName=="Microsoft Internet Explorer")
 	fixPlaceholders();
 }
 ```
-
+**imposeLength( cssSelector )** imposes the specific length on any input so that a user may not enter any characters more than the maxlength.
+```sh
+imposeLength('.feedBackArea') // It'll only that number of characters which is defined inside the attribute of the textarea.
+```
 Array
 ====
 **isArray(obj)** Checks if object is an array

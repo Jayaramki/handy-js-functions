@@ -47,6 +47,21 @@ var HandyDom = {
                   this.value = defaultValue;
           });
      });
-  }
+  },
+
+  /**
+   * Imposes the length upon any input element so that it may not let any user enter any more characters
+   * @param  {string} selector CSS selector to select the input
+   */
+  imposeLength : function ( selector ){
+    
+    var text = $( selector ).val();
+    var limit = $( selector ).attr('maxlength');
+    
+    if( text.length > limit ){
+        //Truncate the text if necessary
+        $( selector ).val( text.substr( 0, limit ) ); 
+    }
+}
   
 };
