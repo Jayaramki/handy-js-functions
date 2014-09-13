@@ -45,6 +45,18 @@ var HandyArray = {
         }
      });
      return string;
+  },
+
+  /**
+   * Shuffles the provided array in Javascript
+   * @param  {array} arr   Array whose elements are to be shuffled
+   * @source               http://jsfromhell.com/array/shuffle [v1.0]
+   * @author               Jonas Raoni Soares Silva
+   * @return {array}       Array in the shuffled form
+   */
+  function shuffle( arr ){ //v1.0
+      for ( var j, x, i = arr.length; i; j = Math.floor(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
+      return arr;
   }
 
 };
