@@ -112,7 +112,7 @@ arrContains(arr, str) // returns true
 var arr = [12,3,4,23,21,2];
 implode(arr, '+'); // "12+3+4+23+21+2"
 ```
-**shuffle( arr )**
+**shuffle( arr )** shuffles the passed array
 ```sh
 shuffle([23,4,53,2,12,90,43,21,12,2,34,5,66,65,32,3,39]);
 ```
