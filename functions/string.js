@@ -114,5 +114,14 @@ var HandyString = {
      var tmp = document.createElement("div");
      tmp.innerHTML = html;
      return tmp.textContent || tmp.innerText || "";
+  },
+
+  /**
+   * Capitalizes the first character of the passed string
+   * @param  {string} str String whose first character is to be made uppercase
+   * @return {string}     String with the first character changed to uppercase
+   */
+  capFirstChar : function ( str ) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 }

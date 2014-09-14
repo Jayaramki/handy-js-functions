@@ -209,6 +209,10 @@ isIP(str) // returns true
 var html = "<h1>Hello there.</h1><p>I have got some HTML tags</p>";
 strip( html ) // returns "Hello there. I have got some HTML tags"
 ```
+**capFirstChar( string )** capitalizes the first character of the passed sring
+```sh
+capFirstChar( 'hello world' ); // Hello world
+```
 Objects
 ====
 **isEmptyObject ( obj )** checks if the object passed is empty or not!

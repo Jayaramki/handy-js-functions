@@ -109,5 +109,4 @@ var HandyDate = {
 
 		return today;
 	}
-
 };
