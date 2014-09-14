@@ -234,7 +234,7 @@ getWindowUrl(); // "https://github.com/kamranahmedse"
 ```
 **getParamValue( paramName )** returns the value of the `paramName` from the query string if found, and false otherwise.
 ```sh
-// Let's say the URL is : http://someurl.com/play.php?game=tictactoe
+// For example URL is : http://someurl.com/play.php?game=tictactoe
 getParamValue( 'game' ); // "tictactoe"
 ```
 
