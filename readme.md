@@ -226,3 +226,9 @@ var student = { name: 'Some Student', rollno: '123' };
 student = deleteObjProp( student, property );
 console.log( student ); // student => { name: 'Some Student' }
 ```
+URL
+====
+**getWindowUrl()** returns the current URL
+```sh
+getWindowUrl(); // "https://github.com/kamranahmedse"
+```
