@@ -92,6 +92,10 @@ if (browserName=="Microsoft Internet Explorer")
 ```sh
 imposeLength('.feedBackArea') // It'll only that number of characters which is defined inside the attribute of the textarea.
 ```
+**scrollToEl( el, speed )** smoothly scrolls the user to the specific DOM element
+```sh
+scrollToEl('footer', 1000)
+```
 Array
 ====
 **isArray(obj)** Checks if object is an array

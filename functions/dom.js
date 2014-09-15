@@ -62,6 +62,16 @@ var HandyDom = {
         //Truncate the text if necessary
         $( selector ).val( text.substr( 0, limit ) ); 
     }
-}
-  
+  },
+
+  /**
+   * Smoothly scrolls to the specific element on the body
+   * @param  {string} el CSS selector to select the element
+   * @param  {integer} speed Speed of scrolling in miliseconds
+   */
+  scrollToEl : function ( el, speed ) {
+      $('html, body').animate({
+          scrollTop: $(el).offset().top
+      }, speed);
+  }  
 };
