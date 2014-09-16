@@ -72,6 +72,11 @@ getCurrentDate(); // 2014/09/07
 isLeapYear(2014); // false
 isLeapYear(2000); // true
 ```
+**daydiff( firstDate, secondDate )** return the difference between two dates in days
+```sh
+daydiff('2014/9/16', '2014/9/20') // returns 4
+daydiff('2014/9/16', '2015/9/20') // returns 369
+```
 DOM
 ====
 **isPageEndReached()** checks if the end of page is reached. Pass the optional param (numeric value) that will check if that much pixels are left towards the apge end
