@@ -27,7 +27,7 @@ var HandyNum = {
 	 * @param  {object} number Number that is to be transformed to integer
 	 * @return {integer}       Returns the integer value
 	 */
-	function getInt ( number ) {
+	getInt : function ( number ) {
 		return parseInt( number, 10 ) || 0;
-	}
+	},
 };
