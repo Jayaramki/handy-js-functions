@@ -140,12 +140,15 @@ getDecimals( 2.523232323, 2) // 2.52
 getDecimals( 22323.1, 2) // 22323.10
 getDecimals( 12.11, 3) // 12.110
 ```
-**getInt()** returns the integer value of the passed number if the number found and 0 if that's not a number.
+**getInt( obj )** returns the integer value of the passed number if the number found and 0 if that's not a number.
 ```sh
 getInt('25') // 25
 getInt('asdfsd') // 0
 ```
-
+**decToHex( number )** converts the passed number to hexadecimal form and returns it
+```sh
+decToHex( 99999 ); //"1869f"
+```
 String
 ====
 **isString(obj)** Checks if object is a string
