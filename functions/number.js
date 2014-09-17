@@ -38,5 +38,14 @@ var HandyNum = {
 	 */
 	decToHex : function ( number ) {
 		return number.toString(16);
+	},
+
+	/**
+	 * Converts the hexadecimal string to number and returns it
+	 * @param  {string} hexString Hexadecimal form of some number
+	 * @return {integer}           Decimal value of that hexadecimal string
+	 */
+	hexToDec : function ( hexString ) {
+		return parseInt(hexString, 16)
 	}
 };

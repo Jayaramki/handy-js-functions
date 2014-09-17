@@ -149,6 +149,10 @@ getInt('asdfsd') // 0
 ```sh
 decToHex( 99999 ); //"1869f"
 ```
+**hexToDec( hexString )** converts the passed hexadecimal string to decimal value and returns it
+```sh
+hexToDec( "1869f" ); //99999
+```
 String
 ====
 **isString(obj)** Checks if object is a string
