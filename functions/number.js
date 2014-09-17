@@ -30,4 +30,13 @@ var HandyNum = {
 	getInt : function ( number ) {
 		return parseInt( number, 10 ) || 0;
 	},
+
+	/**
+	 * Returns the passed number in hexadecimal form
+	 * @param  {integer} number Number that is to be transformed to hexadecimal
+	 * @return {string}        Hexadecimal value of the passed number
+	 */
+	decToHex : function ( number ) {
+		return number.toString(16);
+	}
 };
