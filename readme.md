@@ -242,6 +242,11 @@ var student = { name: 'Some Student', rollno: '123' };
 student = deleteObjProp( student, property );
 console.log( student ); // student => { name: 'Some Student' }
 ```
+**getStringWords( string, wordCount )** returns the first n words of the passed strign
+```sh
+var string = "first second third fourth five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen ninteen twenty";
+getStringWords ( string, 9 ); // first second third fourth five six seven eight nine
+```
 URL
 ====
 **getWindowUrl()** returns the current URL

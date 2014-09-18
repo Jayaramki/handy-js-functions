@@ -123,5 +123,18 @@ var HandyString = {
    */
   capFirstChar : function ( str ) {
     return str.charAt(0).toUpperCase() + str.slice(1);
+  },
+
+  /**
+   * Returns the specific numbers of words from the start of the string
+   * @param  {string} string    String which is to be trimmed
+   * @param  {integer} wordCount Number representing the number of words that are required
+   * @return {string}           The first wordCount number of words of the string
+   */
+  getStringWords : function ( string, wordCount ) {
+    var words = string.split(' ');
+    var reqdWords = words.splice( 0, wordCount );
+
+    return reqdWords.join(' ');
   }
 }
