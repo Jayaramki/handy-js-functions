@@ -93,9 +93,9 @@ if (browserName=="Microsoft Internet Explorer")
 	fixPlaceholders();
 }
 ```
-**imposeLength( cssSelector )** imposes the specific length on any input so that a user may not enter any characters more than the maxlength.
+**imposeLength( cssSelector, length )** imposes the specific length on an input element i.e. it will trim away the extra characters
 ```sh
-imposeLength('.feedBackArea') // It'll only that number of characters which is defined inside the attribute of the textarea.
+imposeLength('.feedBackArea', 400) // trim away the characters that exceed 400 length 
 ```
 **scrollToEl( el, speed )** smoothly scrolls the user to the specific DOM element
 ```sh
