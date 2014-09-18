@@ -242,10 +242,14 @@ var student = { name: 'Some Student', rollno: '123' };
 student = deleteObjProp( student, property );
 console.log( student ); // student => { name: 'Some Student' }
 ```
-**getStringWords( string, wordCount )** returns the first n words of the passed strign
+**getStringWords( string, wordCount )** returns the first n words of the passed string
 ```sh
 var string = "first second third fourth five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen ninteen twenty";
 getStringWords ( string, 9 ); // first second third fourth five six seven eight nine
+```
+**getWordsCount( string )** returns the count of words in the passed string
+```sh
+getWordsCount( 'This is a simple sentence whose number of words are to be counted.' ); // 13
 ```
 URL
 ====

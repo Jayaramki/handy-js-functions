@@ -136,5 +136,15 @@ var HandyString = {
     var reqdWords = words.splice( 0, wordCount );
 
     return reqdWords.join(' ');
+  },
+
+  /**
+   * Returns the number of words in a string
+   * @param  {str} string String whose number of words is to be counted
+   * @return {integer}        Number representing the number of words in that string
+   */
+  getWordsCount : function ( string ) {
+    var words = string.split(' ');
+    return words.length;
   }
 }
