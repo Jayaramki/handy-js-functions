@@ -101,6 +101,10 @@ imposeLength('.feedBackArea', 400) // trim away the characters that exceed 400 l
 ```sh
 scrollToEl('footer', 1000)
 ```
+**scrollToTop( speed )** smoothly scrolls to the top of the page
+```sh
+scrollToTop( 2000 );
+```
 Array
 ====
 **isArray(obj)** Checks if object is an array

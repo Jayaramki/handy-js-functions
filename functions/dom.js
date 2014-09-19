@@ -72,5 +72,13 @@ var HandyDom = {
       $('html, body').animate({
           scrollTop: $(el).offset().top
       }, speed);
-  }  
+  },
+
+  /**
+   * Smoothly scrolls to the top of the page
+   * @param  {integer} speed Integer representign the speed of scroll
+   */
+  scrollToTop : function ( speed ) {
+    $("html, body").animate({ scrollTop: 0 }, speed);
+  }
 };
