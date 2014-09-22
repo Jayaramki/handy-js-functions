@@ -213,6 +213,12 @@ strip( html ) // returns "Hello there. I have got some HTML tags"
 ```sh
 capFirstChar( 'hello world' ); // Hello world
 ```
+**isPalindrome( str )** checks if the passed object is a palindrome or not
+```sh
+isPalindrome('1231'); // false
+isPalindrome('123321'); // true
+isPalindrome('12321'); // true
+```
 Objects
 ====
 **isEmptyObject ( obj )** checks if the object passed is empty or not!
