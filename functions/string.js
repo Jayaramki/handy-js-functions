@@ -123,5 +123,30 @@ var HandyString = {
    */
   capFirstChar : function ( str ) {
     return str.charAt(0).toUpperCase() + str.slice(1);
+  },
+
+  /**
+   * Checks if the passed number or string is a palindrome or not
+   * @param  {string|number}  str String or number that is to be checked
+   * @return {Boolean}     True if the passed object is a palindrom and false otherwise
+   */
+  isPalindrome : function ( str ) {
+    str = str + '';
+
+    var length = str.length,
+        counter = 0,
+        revCounter = str.length - 1,
+        isPalindrome = true;
+
+    while ( revCounter >= counter ) {
+      if ( str[counter] != str[revCounter] ) {
+        isPalindrome = false;
+        break;
+      };
+      counter++;
+      revCounter--;
+    }
+
+    return isPalindrome;
   }
 }
