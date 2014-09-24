@@ -171,15 +171,5 @@ var HandyString = {
   getWordsCount : function ( string ) {
     var words = string.split(' ');
     return words.length;
-  },
-  
-    /**
-   * Returns the number of characters in a string
-   * @param  {str} string String whose number of characters is to be counted
-   * @return {integer}        Number representing the number of characters in that string
-   */
-  getCharCount : function ( string ) {
-    var chars = string.split('');
-    return chars.length;
   }
 }
