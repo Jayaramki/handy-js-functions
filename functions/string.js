@@ -148,5 +148,28 @@ var HandyString = {
     }
 
     return isPalindrome;
+  },
+  
+  /**
+   * Returns the specific numbers of words from the start of the string
+   * @param  {string} string    String which is to be trimmed
+   * @param  {integer} wordCount Number representing the number of words that are required
+   * @return {string}           The first wordCount number of words of the string
+   */
+  getStringWords : function ( string, wordCount ) {
+    var words = string.split(' ');
+    var reqdWords = words.splice( 0, wordCount );
+
+    return reqdWords.join(' ');
+  },
+
+  /**
+   * Returns the number of words in a string
+   * @param  {str} string String whose number of words is to be counted
+   * @return {integer}        Number representing the number of words in that string
+   */
+  getWordsCount : function ( string ) {
+    var words = string.split(' ');
+    return words.length;
   }
 }

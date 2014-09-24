@@ -53,15 +53,32 @@ var HandyDom = {
    * Imposes the length upon any input element so that it may not let any user enter any more characters
    * @param  {string} selector CSS selector to select the input
    */
-  imposeLength : function ( selector ){
+  imposeLength : function ( selector, length ){
     
     var text = $( selector ).val();
-    var limit = $( selector ).attr('maxlength');
     
-    if( text.length > limit ){
+    if( text.length > length ){
         //Truncate the text if necessary
-        $( selector ).val( text.substr( 0, limit ) ); 
+        $( selector ).val( text.substr( 0, length ) ); 
     }
-}
-  
+  },
+
+  /**
+   * Smoothly scrolls to the specific element on the body
+   * @param  {string} el CSS selector to select the element
+   * @param  {integer} speed Speed of scrolling in miliseconds
+   */
+  scrollToEl : function ( el, speed ) {
+      $('html, body').animate({
+          scrollTop: $(el).offset().top
+      }, speed);
+  },
+
+  /**
+   * Smoothly scrolls to the top of the page
+   * @param  {integer} speed Integer representign the speed of scroll
+   */
+  scrollToTop : function ( speed ) {
+    $("html, body").animate({ scrollTop: 0 }, speed);
+  }
 };

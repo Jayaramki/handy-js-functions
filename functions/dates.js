@@ -108,5 +108,17 @@ var HandyDate = {
 		today = yyyy + '/' + mm + '/' + dd;
 
 		return today;
+	},
+
+	/**
+	 * Returns the difference between two dates in days
+	 * @param  {string} first  A string representing the date
+	 * @param  {string} second A string representing the date
+	 * @return {integer}        An integer representing the difference between the dates in days
+	 */
+	daydiff : function ( first, second ) {
+	    first = new Date(first);
+	    second = new Date(second);
+	    return (second-first)/(1000*60*60*24);
 	}
 };

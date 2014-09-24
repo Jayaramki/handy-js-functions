@@ -72,6 +72,11 @@ getCurrentDate(); // 2014/09/07
 isLeapYear(2014); // false
 isLeapYear(2000); // true
 ```
+**daydiff( firstDate, secondDate )** return the difference between two dates in days
+```sh
+daydiff('2014/9/16', '2014/9/20') // returns 4
+daydiff('2014/9/16', '2015/9/20') // returns 369
+```
 DOM
 ====
 **isPageEndReached()** checks if the end of page is reached. Pass the optional param (numeric value) that will check if that much pixels are left towards the apge end
@@ -88,9 +93,17 @@ if (browserName=="Microsoft Internet Explorer")
 	fixPlaceholders();
 }
 ```
-**imposeLength( cssSelector )** imposes the specific length on any input so that a user may not enter any characters more than the maxlength.
+**imposeLength( cssSelector, length )** imposes the specific length on an input element i.e. it will trim away the extra characters
 ```sh
-imposeLength('.feedBackArea') // It'll only that number of characters which is defined inside the attribute of the textarea.
+imposeLength('.feedBackArea', 400) // trim away the characters that exceed 400 length 
+```
+**scrollToEl( el, speed )** smoothly scrolls the user to the specific DOM element
+```sh
+scrollToEl('footer', 1000)
+```
+**scrollToTop( speed )** smoothly scrolls to the top of the page
+```sh
+scrollToTop( 2000 );
 ```
 Array
 ====
@@ -131,12 +144,19 @@ getDecimals( 2.523232323, 2) // 2.52
 getDecimals( 22323.1, 2) // 22323.10
 getDecimals( 12.11, 3) // 12.110
 ```
-**getInt()** returns the integer value of the passed number if the number found and 0 if that's not a number.
+**getInt( obj )** returns the integer value of the passed number if the number found and 0 if that's not a number.
 ```sh
 getInt('25') // 25
 getInt('asdfsd') // 0
 ```
-
+**decToHex( number )** converts the passed number to hexadecimal form and returns it
+```sh
+decToHex( 99999 ); //"1869f"
+```
+**hexToDec( hexString )** converts the passed hexadecimal string to decimal value and returns it
+```sh
+hexToDec( "1869f" ); //99999
+```
 String
 ====
 **isString(obj)** Checks if object is a string
@@ -231,6 +251,15 @@ isEmptyObject({ name: 'Kamran' }) // false
 var student = { name: 'Some Student', rollno: '123' };
 student = deleteObjProp( student, property );
 console.log( student ); // student => { name: 'Some Student' }
+```
+**getStringWords( string, wordCount )** returns the first n words of the passed string
+```sh
+var string = "first second third fourth five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen ninteen twenty";
+getStringWords ( string, 9 ); // first second third fourth five six seven eight nine
+```
+**getWordsCount( string )** returns the count of words in the passed string
+```sh
+getWordsCount( 'This is a simple sentence whose number of words are to be counted.' ); // 13
 ```
 URL
 ====
