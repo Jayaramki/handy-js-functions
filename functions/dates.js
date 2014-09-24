@@ -120,5 +120,26 @@ var HandyDate = {
 	    first = new Date(first);
 	    second = new Date(second);
 	    return (second-first)/(1000*60*60*24);
-	}
+	},
+	
+	/**
+	 * Returns the array of all date objects between two dates
+	 * @param  {string} first  A string representing the date
+	 * @param  {string} second A string representing the date
+	 * @return {array}        An Array contains date objects between the dates
+	 */
+	 getBetweenDates : function(startDt, endDt) {
+	     var error = (HandyDate.isDate(endDt)) && (HandyDate.isDate(startDt)) && (HandyDate.isValidRange(startDt, endDt))) ? false : true,
+	     	between = [];
+		if (error) console.log('error occured!!!... Please Enter Valid Dates');
+    		else {
+        	var currentDate = new Date(startDt),
+            	end = new Date(endDt);
+        	while (currentDate <= end) {
+            	between.push(new Date(currentDate));
+            	currentDate.setDate(currentDate.getDate() + 1);
+        	}
+    	}
+    	return between;
+	 }
 };
