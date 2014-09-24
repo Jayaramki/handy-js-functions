@@ -77,6 +77,11 @@ isLeapYear(2000); // true
 daydiff('2014/9/16', '2014/9/20') // returns 4
 daydiff('2014/9/16', '2015/9/20') // returns 369
 ```
+
+**getBetweenDates( firstDate, secondDate )** return An Array contains date objects between the dates
+```sh
+getBetweenDates('2014/9/22', '2014/9/24') // returns  [Date {Mon Sep 22 2014 05:30:00 GMT+0530 (IST)}, Date {Tue Sep 23 2014 05:30:00 GMT+0530 (IST)}, Date {Wed Sep 24 2014 05:30:00 GMT+0530 (IST)}]
+```
 DOM
 ====
 **isPageEndReached()** checks if the end of page is reached. Pass the optional param (numeric value) that will check if that much pixels are left towards the apge end
