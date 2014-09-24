@@ -260,6 +260,11 @@ getStringWords ( string, 9 ); // first second third fourth five six seven eight 
 **getWordsCount( string )** returns the count of words in the passed string
 ```sh
 getWordsCount( 'This is a simple sentence whose number of words are to be counted.' ); // 13
+
+```
+**getCharCount( string )** returns the count of Characters in the passed string
+```sh
+getCharCount( 'Some sample text' ); // 16
 ```
 URL
 ====
